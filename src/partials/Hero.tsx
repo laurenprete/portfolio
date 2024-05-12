@@ -46,7 +46,7 @@ const Hero = () => (
           <a
             className="font-semibold text-lightblue"
             target="_blank"
-            href="public/assets/docs/LaurenPrete_Resume2024.pdf"
+            href="assets/docs/LaurenPrete_Resume2024.pdf"
           >
             resume
           </a>
@@ -71,7 +71,7 @@ const Hero = () => (
       </div>
       <div className="w-2/5 px-10">
         <img
-          src="public/assets/images/lauren.jpg"
+          src="assets/images/lauren.jpg"
           alt="Lauren"
           className="img-shadow w-48 rounded-full border-4 border-lightpurple object-cover shadow-2xl"
         />
