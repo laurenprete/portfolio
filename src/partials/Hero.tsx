@@ -14,16 +14,16 @@ const skills = [
 ];
 const Hero = () => (
   <div>
-    <div className="flex items-center justify-center text-lg text-gray-200">
-      <div className="w-3/5 text-justify">
-        <h1 className="mb-4 text-4xl font-bold text-lightpurple">
+    <div className="flex flex-col lg:flex-row items-center justify-center lg:text-lg text-gray-200">
+      <div className="lg:w-3/5 lg:text-justify">
+        <h1 className="mb-4 text-3xl lg:text-4xl font-bold text-lightpurple">
           Hi, I'm <span>Lauren.</span>
         </h1>
         <p className="py-2">
           I'm a{' '}
           <span className="font-semibold text-white">
-            full-stack software engineer
-          </span>{' '}
+            full-stack software engineer{' '}
+          </span>
           with 8 years of experience. I specialize in{' '}
           <span className="font-semibold text-white">
             web application and web API development
@@ -69,22 +69,22 @@ const Hero = () => (
           .
         </p>
       </div>
-      <div className="w-2/5 px-10">
+      <div className="lg:w-2/5 px-10 mb-6 md:mb-10 lg:mb-0 order-first lg:order-last flex items-center justify-center">
         <img
           src="assets/images/lauren.jpg"
           alt="Lauren"
-          className="img-shadow w-48 rounded-full border-4 border-lightpurple object-cover shadow-2xl"
+          className="img-shadow w-28 md:w-36 lg:w-48 rounded-full border-2 border-lightpurple object-cover"
         />
       </div>
     </div>
     <div>
-      <h2 className="my-4 text-3xl font-bold text-lightpurple">
-        Technologies & Skills
+      <h2 className="my-4 text-2xl lg:text-3xl font-bold text-lightpurple">
+        Languages & Tools
       </h2>
       <div>
         {skills.map((skill, index) => (
           <span
-            className="mx-1 inline-flex items-center rounded-md bg-purple-100 px-2 py-1 font-medium text-medpurple"
+            className="m-1 inline-flex items-center rounded-md bg-purple-100 px-2 py-1 font-medium text-medpurple"
             key={index}
           >
             {skill}

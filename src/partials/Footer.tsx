@@ -1,5 +1,5 @@
 const Footer = () => (
-  <footer className="absolute bottom-10">
+  <footer className="mt-20">
     © 2024 Lauren Prete. All rights reserved.
   </footer>
 );
