@@ -5,22 +5,29 @@ import { AppConfig } from '@/utils/AppConfig';
 const { title } = AppConfig;
 const { description } = AppConfig;
 
+const items = [
+  { type: "video", src: "/assets/videos/Recipes.mp4", alt: "Video showing 5Squares recipe screen" },
+  { type: "video", src: "/assets/videos/CustomerInfo.mp4", alt: "Video showing 5Squares customer information page" },
+];
 ---
 
 <Base head={{ title, description }}>
   <div class="max-w-4xl mx-auto p-6">
     <h1 class="text-3xl font-bold mb-4 text-lightpurple">5Squares Meal Delivery Platform</h1>
-    <img class="my-6 rounded-lg shadow-2xl" src="/assets/images/5sq.png"/>
+    <img class="my-6 w-full rounded-lg shadow-2xl" src="/assets/images/projects/5sq.png"/>
     <h2 class="text-2xl font-semibold mb-2 text-lightpurple">Project Description:</h2>
-    <p class="mb-4">
-      The objective of the 5Squares project was to develop a robust and scalable admin backend to streamline the management of orders, customers, recipes, and other key aspects of the business. This comprehensive admin backend facilitates efficient operations by allowing users to quickly access, manage, and report on data.
-    </p>
-    <p class="mb-4">
-      As the lead developer, I was responsible for creating the admin backend using SQL, a web API implemented in C# with .NET 6, and an Angular frontend. The platform includes various modules for managing different aspects of the business.
-    </p>
+    <div class="my-4">
+      <p class="py-2">
+        The objective of the 5Squares project was to develop a robust and scalable admin backend to streamline the management of orders, customers, recipes, and other key aspects of the business. This comprehensive admin backend facilitates efficient operations by allowing users to quickly access, manage, and report on data.
+      </p>
+      <p class="py-2">
+        As the lead developer, I was responsible for creating the admin backend using SQL, a web API implemented in C# with .NET 6, and an Angular frontend. The platform includes various modules for managing different aspects of the business.
+      </p>
+    </div>
+
   
     <h2 class="text-2xl font-semibold mb-2 text-lightpurple">Key Features and Modules:</h2>
-    <ul class="list-disc list-inside mb-4">
+    <ul class="my-4 list-disc list-inside mb-4">
       <li><strong>Authentication:</strong> Require users to log in and support different roles</li>
       <li><strong>Orders:</strong> Manage customer orders, track order statuses, and handle order modifications.</li>
       <li><strong>Customers:</strong> Maintain customer profiles, preferences, and order histories.</li>
@@ -38,18 +45,36 @@ const { description } = AppConfig;
     </ul>
   
     <h2 class="text-2xl font-semibold mb-2 text-lightpurple">Deliverables:</h2>
-    <ol class="list-decimal list-inside mb-4">
+    <ol class="list-decimal list-inside my-4">
       <li><strong>SQL Database:</strong> A well-structured database to store and manage all necessary data related to orders, customers, recipes, ingredients, etc.</li>
       <li><strong>C# .NET 6 Web API:</strong> A scalable and secure REST API to handle all backend operations and business logic</li>
       <li><strong>Admin Console Frontend:</strong> A user-friendly frontend with various screens dedicated to the described modules/features</li>
     </ol>
   
     <h2 class="text-2xl font-semibold mb-2 text-lightpurple">Technologies Used:</h2>
-    <ul class="list-disc list-inside">
+    <ul class="my-4 list-disc list-inside">
       <li><strong>Backend:</strong> REST Web API using C# .NET 6</li>
       <li><strong>Database:</strong> Microsoft SQL Server</li>
       <li><strong>Frontend:</strong> Angular 15</li>
     </ul>
+
+    <h2 class="text-2xl font-semibold mb-2 text-lightpurple">
+      Videos
+    </h2>
+    <p class="my-4">
+      Click the videos for a higher resolution
+    </p>
+    <div class="my-4 grid grid-cols-3 gap-2">
+      {items.map((item) => (
+        <div>
+            <a href={item.src} target="_blank">
+              <video src={item.src} controls class="w-full h-auto">
+              Your browser does not support the video tag.
+            </video>
+            </a>
+        </div>
+      ))}
+    </div>
   </div>
   <a class="text-lightpurple font-bold" href="/">Back</a>
 </Base>

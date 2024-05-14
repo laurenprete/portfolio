@@ -1,52 +1,93 @@
 ---
-import Base from '@/templates/Base.astro';
-import { AppConfig } from '@/utils/AppConfig';
+import Base from "@/templates/Base.astro";
+import { AppConfig } from "@/utils/AppConfig";
 
-const { title } = AppConfig;
-const { description } = AppConfig;
+const title = AppConfig.title;
+const description = AppConfig.description;
 
+const items = [
+  { type: "image", src: "/assets/images/projects/ethernet.png", alt: "Rugged embedded ethernet landing page" },
+  { type: "image", src: "/assets/images/projects/vpx.png", alt: "VPX power supplies landing page" },
+];
 ---
 
 <Base head={{ title, description }}>
   <div class="max-w-4xl mx-auto p-6">
-    <h1 class="text-3xl text-lightpurple font-bold mb-4">SEO Product Landing Pages</h2>
-    <img class="my-6 rounded-lg shadow-2xl" src="/assets/images/NAILanding.png"/>
+    <h1 class="text-3xl text-lightpurple font-bold mb-4">
+      SEO Product Landing Pages
+    </h1>
+    <img class="my-6 w-full rounded-lg shadow-2xl" src="/assets/images/projects/NAILanding.png"
+    />
     <div class="mb-6">
-      <h2 class="text-2xl font-semibold mb-2 text-lightpurple">Project Overview</h3>
-      <p class="text-gray-200">The goal of this project was to design and develop SEO-optimized landing pages for select North Atlantic Industries product lines to improve online visibility, drive organic traffic, and increase conversion rates. These landing pages were tailored to target specific keywords relevant to the products, ensuring higher rankings on search engine results pages (SERPs).</p>
+      <h2 class="text-2xl font-semibold mb-2 text-lightpurple">
+        Project Overview
+      </h2>
+      <p class="my-4 text-gray-200">
+        The goal of this project was to design and develop SEO-optimized landing
+        pages for select North Atlantic Industries product lines to improve
+        online visibility, drive organic traffic, and increase conversion rates.
+        These landing pages were tailored to target specific keywords relevant
+        to the products, ensuring higher rankings on search engine results pages
+        (SERPs). Check them out live 
+        <a class="font-bold text-lightblue" target="_blank" href="https://product.naii.com/products/vpx-power-supplies">here</a> and 
+        <a class="font-bold text-lightblue" target="_blank" href="https://product.naii.com/products/rugged-ethernet-devices">here</a>
+      </p>
     </div>
-    
+
     <div class="mb-6">
       <h3 class="text-2xl font-semibold mb-2 text-lightpurple">Objectives</h3>
-      <ul class="list-disc list-inside text-gray-200">
-        <li><strong>Increase Organic Traffic:</strong> Attract more visitors from search engines by ranking higher for targeted keywords.</li>
-        <li><strong>Enhance User Experience:</strong> Provide potential customers with clear, concise, and relevant information about selected NAI products.</li>
-        <li><strong>Boost Conversion Rates:</strong> Convert more visitors into leads and customers through compelling content and calls to action.</li>
-        <li><strong>Strengthen Brand Presence:</strong> Improve brand recognition and authority in our industry by consistently appearing in search results.</li>
+      <ul class="my-4 list-disc list-inside text-gray-200">
+        <li>
+          <strong>Increase Organic Traffic:</strong> Attract more visitors from search
+          engines by ranking higher for targeted keywords.
+        </li>
+        <li>
+          <strong>Enhance User Experience:</strong> Provide potential customers with
+          clear, concise, and relevant information about selected NAI products.
+        </li>
+        <li>
+          <strong>Boost Conversion Rates:</strong> Convert more visitors into leads
+          and customers through compelling content and calls to action.
+        </li>
+        <li>
+          <strong>Strengthen Brand Presence:</strong> Improve brand recognition and
+          authority in our industry by consistently appearing in search results.
+        </li>
       </ul>
     </div>
-    
-    <div class="mb-6">
-      <h3 class="text-2xl font-semibold mb-2 text-lightpurple">Scope of Work</h3>
-      <ol class="list-decimal list-inside text-gray-200">
+
+    <div>
+      <h3 class="text-2xl font-semibold mb-2 text-lightpurple">
+        Scope of Work
+      </h3>
+      <ol class="my-4 list-decimal list-inside text-gray-200">
         <li class="mb-2">
           <strong>Keyword Research and Analysis:</strong>
           <ul class="list-disc list-inside ml-6">
-            <li>Identify high-impact keywords relevant to our products and industry.</li>
+            <li>
+              Identify high-impact keywords relevant to our products and
+              industry.
+            </li>
             <li>Analyze competitor keywords and strategies.</li>
           </ul>
         </li>
         <li class="mb-2">
           <strong>Content Creation:</strong>
           <ul class="list-disc list-inside ml-6">
-            <li>Write engaging, informative, and SEO-friendly content for each landing page.</li>
+            <li>
+              Write engaging, informative, and SEO-friendly content for each
+              landing page.
+            </li>
             <li>Ensure content includes targeted keywords effectively.</li>
           </ul>
         </li>
         <li class="mb-2">
           <strong>On-Page SEO Optimization:</strong>
           <ul class="list-disc list-inside ml-6">
-            <li>Optimize title tags, meta descriptions, headers, and image alt texts.</li>
+            <li>
+              Optimize title tags, meta descriptions, headers, and image alt
+              texts.
+            </li>
             <li>Implement internal and external linking strategies.</li>
           </ul>
         </li>
@@ -55,31 +96,65 @@ const { description } = AppConfig;
           <ul class="list-disc list-inside ml-6">
             <li>Create visually appealing and user-friendly landing pages.</li>
             <li>Ensure responsive design for mobile and desktop devices.</li>
-            <li>Ensure all page features are perceivable and operable by those with disabilities.</li>
+            <li>
+              Ensure all page features are perceivable and operable by those
+              with disabilities.
+            </li>
           </ul>
         </li>
         <li class="mb-2">
           <strong>Technical SEO:</strong>
           <ul class="list-disc list-inside ml-6">
             <li>Ensure pages load quickly and perform smoothly.</li>
-            <li>Implement structured HTML5 markup to enhance search engine understanding.</li>
+            <li>
+              Implement structured HTML5 markup to enhance search engine
+              understanding.
+            </li>
           </ul>
         </li>
         <li class="mb-2">
           <strong>Analytics and Reporting:</strong>
           <ul class="list-disc list-inside ml-6">
-            <li>Set up tracking using Google Analytics, Google Search Console, and Semrush.</li>
+            <li>
+              Set up tracking using Google Analytics, Google Search Console, and
+              Semrush.
+            </li>
             <li>Audit SEO metrics using Google Lighthouse.</li>
           </ul>
         </li>
       </ol>
     </div>
 
-    <h2 class="text-2xl font-semibold mb-2 text-lightpurple">Technologies Used:</h2>
-    <ul class="list-disc list-inside">
+    <h2 class="text-2xl font-semibold mb-2 text-lightpurple">
+      Technologies Used:
+    </h2>
+    <ul class="my-4 list-disc list-inside">
       <li><strong>Frontend:</strong> Sveltekit, Tailwind CSS</li>
-      <li><strong>Tools:</strong> Google Analytics, Semrush, Google Lighthouse</li>
+      <li>
+        <strong>Tools:</strong> Google Analytics, Semrush, Google Lighthouse
+      </li>
     </ul>
+
+    <h2 class="text-2xl font-semibold mb-2 text-lightpurple">
+      Images
+    </h2>
+    <p class="my-4">
+      Click the images for a higher resolution
+    </p>
+    <div class="my-4 grid grid-cols-3 gap-2">
+      {items.map((item, index) => (
+        <div>
+
+            <a href={item.src} target="_blank">
+              <img
+                src={item.src}
+                alt={item.alt || `Carousel item ${index + 1}`}
+                class="w-96 h-96 object-cover rounded-sm shadow-2xl"
+              />
+            </a>
+        </div>
+      ))}
+    </div>
   </div>
   <a class="text-lightpurple font-bold" href="/">Back</a>
 </Base>

@@ -6,6 +6,7 @@ const skills = [
   'Python',
   'Angular',
   'React',
+  'Tailwind',
   'SQL',
   'Docker',
   'DevOps',
