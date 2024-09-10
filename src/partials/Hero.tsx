@@ -55,7 +55,7 @@ const Hero = () => (
           <a
             className="font-semibold text-lightblue"
             target="_blank"
-            href="www.linkedin.com/in/lauren-dev"
+            href="https://www.linkedin.com/in/lauren-dev/"
           >
             LinkedIn
           </a>
