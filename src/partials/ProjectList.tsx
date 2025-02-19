@@ -29,7 +29,7 @@ const ProjectList: React.FC = () => (
     <p className="mb-6">
     I currently work for North Atlantic Industries, an independent company creating embedded computing products for industrial, aerospace, and defense applications. 
     My team is awesome and it's a great place to work! Unfortunately, I am unable to share most of my projects there publicly. Below you'll find my side projects 
-    or things I can share.
+    or things I can share. I'm still working on updating this section with projects.
     </p>
     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       {projects.map((project, index) => (

@@ -47,11 +47,11 @@ const Hero = () => (
           <a
             className="font-semibold text-lightblue"
             target="_blank"
-            href="assets/docs/LaurenPrete_Resume2024.pdf"
+            href="assets/docs/LaurenPrete_Resume2025.pdf"
           >
             resume
           </a>
-          , find me on{' '}
+           or find me on{' '}
           <a
             className="font-semibold text-lightblue"
             target="_blank"
@@ -59,15 +59,6 @@ const Hero = () => (
           >
             LinkedIn
           </a>
-          , or hire me on{' '}
-          <a
-            className="font-semibold text-lightblue"
-            target="_blank"
-            href="https://www.upwork.com/freelancers/~01283d68d4c0f7353f?mp_source=share"
-          >
-            Upwork
-          </a>
-          .
         </p>
       </div>
       <div className="lg:w-2/5 px-10 mb-6 md:mb-10 lg:mb-0 order-first lg:order-last flex items-center justify-center">
