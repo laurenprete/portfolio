@@ -48,10 +48,7 @@ const Hero = () => (
             className="font-semibold text-lightblue"
             target="_blank"
             href="assets/docs/LaurenPrete_Resume2025.pdf"
-          >
-            resume
-          </a>
-           or find me on{' '}
+          >resume</a> or find me on{' '}
           <a
             className="font-semibold text-lightblue"
             target="_blank"
