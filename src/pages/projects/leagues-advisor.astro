@@ -1,0 +1,79 @@
+---
+import Base from '@/templates/Base.astro';
+import ProjectHero from '@/components/ProjectHero.astro';
+import FeatureBlock from '@/components/FeatureBlock.astro';
+import { AppConfig } from '@/utils/AppConfig';
+
+const title = `Leagues Advisor | ${AppConfig.title}`;
+const description = 'Task planner and progress tracker for Old School RuneScape Leagues';
+---
+
+<Base head={{ title, description }}>
+  <div class="max-w-4xl mx-auto">
+    <ProjectHero
+      title="Leagues Advisor"
+      tagline="Task planner and progress tracker for Old School RuneScape Leagues"
+      image="/assets/images/projects/leagues-hero.png"
+      techStack={['React', 'TypeScript', 'Java', 'RuneLite', 'AWS Lambda', 'DynamoDB']}
+      liveUrl="https://leagues-advisor.com"
+      githubUrl="https://github.com/laurenprete/leagues-advisor-sync"
+    />
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-lightpurple mb-4">The Story</h2>
+      <p class="text-gray-200 leading-relaxed mb-4">
+        Old School RuneScape Leagues are temporary competitive game modes where players
+        earn points by completing tasks across skills, quests, and achievements. With
+        hundreds of tasks available, planning which ones to tackle — and in what order —
+        is crucial for maximizing your score.
+      </p>
+      <p class="text-gray-200 leading-relaxed mb-4">
+        Leagues Advisor is a two-part system: a web application for browsing and planning
+        task routes, and a RuneLite plugin that automatically syncs your character's
+        progress in real time. The plugin reads skill levels, quest completions, achievement
+        diaries, combat achievements, and collection log entries every 10 seconds and pushes
+        them to the web app.
+      </p>
+      <p class="text-gray-200 leading-relaxed">
+        The result is a live dashboard that shows exactly where you stand and which tasks
+        are within reach, so you can make informed decisions about what to do next.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-lightpurple mb-6">Features</h2>
+
+      <FeatureBlock
+        title="RuneLite Plugin — Automatic Progress Sync"
+        description="A Java plugin for the RuneLite client that reads your character's state — skill levels, quest completions, achievement diaries, combat achievements, and collection log — and syncs it to the web app every 10 seconds. Uses a server-driven manifest system so new tracking variables can be added without a plugin update."
+        image="/assets/images/projects/leagues-plugin.png"
+        imageAlt="RuneLite plugin syncing character progress"
+      />
+
+      <FeatureBlock
+        title="Task Planning and Route Optimization"
+        description="Browse the full task list with filters for skill requirements, regions, and point values. Plan your route through tasks based on your current progress, seeing exactly which prerequisites you've already met."
+        image="/assets/images/projects/leagues-tasks.png"
+        imageAlt="Leagues Advisor task planning interface"
+        reverse={true}
+      />
+
+      <FeatureBlock
+        title="Live Progress Dashboard"
+        description="See your character's progress at a glance — completed tasks, points earned, skills trained, quests finished. Updated in real time as the RuneLite plugin syncs new data."
+        image="/assets/images/projects/leagues-dashboard.png"
+        imageAlt="Leagues Advisor progress dashboard"
+      />
+
+      <FeatureBlock
+        title="Collection and Achievement Tracking"
+        description="Track collection log items with full snapshot and real-time new item detection. Combat achievements are captured via chat message parsing, giving comprehensive coverage of all league scoring categories."
+        image="/assets/images/projects/leagues-collection.png"
+        imageAlt="Leagues Advisor collection log tracking"
+        reverse={true}
+      />
+    </section>
+
+    <a class="text-lightpurple font-bold hover:underline" href="/">&larr; Back to Portfolio</a>
+  </div>
+</Base>
