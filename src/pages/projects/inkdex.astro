@@ -1,0 +1,71 @@
+---
+import Base from '@/templates/Base.astro';
+import ProjectHero from '@/components/ProjectHero.astro';
+import FeatureBlock from '@/components/FeatureBlock.astro';
+import { AppConfig } from '@/utils/AppConfig';
+
+const title = `GPI InkDex | ${AppConfig.title}`;
+const description = 'AI-powered SEO audit and content generation tool for Shopify';
+---
+
+<Base head={{ title, description }}>
+  <div class="max-w-4xl mx-auto">
+    <ProjectHero
+      title="GPI InkDex"
+      tagline="AI-powered SEO audit and content generation tool for Shopify"
+      image="/assets/images/projects/inkdex-hero.png"
+      techStack={['Next.js', 'React 19', 'Claude API', 'Shopify GraphQL', 'Tailwind CSS', 'AWS Amplify']}
+    />
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-lightpurple mb-4">The Story</h2>
+      <p class="text-gray-200 leading-relaxed mb-4">
+        GPI Supplies is a Shopify-based retailer with hundreds of product collections.
+        Each collection page needs optimized SEO metadata, a well-written intro, and
+        targeted keywords to rank well in search. Manually auditing and writing that
+        content across hundreds of pages is slow and inconsistent.
+      </p>
+      <p class="text-gray-200 leading-relaxed mb-4">
+        InkDex solves this by scanning every collection in the store and scoring its
+        SEO readiness on a 0-100 scale across six categories: meta title, meta description,
+        brief intro, content blocks, keyword coverage, and technical hygiene. Where content
+        is weak or missing, the tool generates optimized suggestions using Claude, then
+        writes approved changes directly back to Shopify via the Admin GraphQL API.
+      </p>
+      <p class="text-gray-200 leading-relaxed">
+        Built with Next.js on AWS Amplify with server-side rendering. The scoring
+        engine includes smart validations like detecting placeholder text, flagging
+        old brand names, and catching messaging mismatches between equipment and
+        supplies collections.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-lightpurple mb-6">Features</h2>
+
+      <FeatureBlock
+        title="SEO Scoring Dashboard"
+        description="Every collection gets a score across six weighted categories. Color-coded badges make it easy to spot weak pages at a glance. Filter by collection type, missing fields, or score range. The table is searchable, sortable, and responsive."
+        image="/assets/images/projects/inkdex-dashboard.png"
+        imageAlt="InkDex SEO scoring dashboard with collection scores"
+      />
+
+      <FeatureBlock
+        title="AI Content Suggestions"
+        description="Generate three optimized options per field using Claude. The prompts are context-aware, incorporating product data, collection type, and target keywords. Suggestions follow character limits, avoid generic copy, and adapt tone for equipment vs. supplies pages. One click to apply."
+        image="/assets/images/projects/inkdex-suggestions.png"
+        imageAlt="InkDex AI-generated SEO content suggestions"
+        reverse={true}
+      />
+
+      <FeatureBlock
+        title="Direct Shopify Sync"
+        description="Approved changes write directly to Shopify via the Admin GraphQL API. Updates standard SEO fields and custom metafields in one save, with real-time validation ensuring titles, descriptions, and intros meet length and quality requirements before publishing."
+        image="/assets/images/projects/inkdex-editor.png"
+        imageAlt="InkDex collection editor with Shopify sync"
+      />
+    </section>
+
+    <a class="text-lightpurple font-bold hover:underline" href="/">&larr; Back to Portfolio</a>
+  </div>
+</Base>

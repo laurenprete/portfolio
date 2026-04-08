@@ -1,0 +1,72 @@
+---
+import Base from '@/templates/Base.astro';
+import ProjectHero from '@/components/ProjectHero.astro';
+import FeatureBlock from '@/components/FeatureBlock.astro';
+import { AppConfig } from '@/utils/AppConfig';
+
+const title = `Briarwood Status | ${AppConfig.title}`;
+const description = 'Serverless uptime monitoring and alerting platform';
+---
+
+<Base head={{ title, description }}>
+  <div class="max-w-4xl mx-auto">
+    <ProjectHero
+      title="Briarwood Status"
+      tagline="Serverless uptime monitoring and alerting platform"
+      image="/assets/images/projects/status-hero.png"
+      techStack={['React 19', 'Hono', 'Lambda', 'DynamoDB', 'EventBridge', 'AWS CDK']}
+      liveUrl="https://status.briarwoodsoftware.com"
+    />
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-lightpurple mb-4">The Story</h2>
+      <p class="text-gray-200 leading-relaxed mb-4">
+        As I built more client apps under Briarwood Software, I needed a way to monitor
+        their availability without paying per-seat for a third-party service. I wanted
+        something lightweight, serverless, and cheap to run, with public status pages
+        I could share with clients and email alerts when something went down.
+      </p>
+      <p class="text-gray-200 leading-relaxed mb-4">
+        Briarwood Status runs health checks every 5 minutes via EventBridge-triggered
+        Lambda functions. It tracks response times, uptime percentages, and alert state,
+        with a smart consecutive-failure threshold that prevents false alarms from
+        single flaky checks. When a service goes down, it sends an alert. When it recovers,
+        it sends another with the total downtime.
+      </p>
+      <p class="text-gray-200 leading-relaxed">
+        The public status page supports custom branding and group-based filtering,
+        so each client can see a status page tailored to their services. The admin
+        dashboard provides detailed metrics, response time charts, and on-demand
+        health checks.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-lightpurple mb-6">Features</h2>
+
+      <FeatureBlock
+        title="Public Status Page"
+        description="A clean, responsive status page showing current health, 30-day uptime bars, and last-checked timestamps for every monitored service. Supports custom branding with logo, accent color, and grouped views per client. No authentication required."
+        image="/assets/images/projects/status-public.png"
+        imageAlt="Briarwood Status public status page with uptime bars"
+      />
+
+      <FeatureBlock
+        title="Response Time Monitoring"
+        description="Detailed monitor pages with response time charts rendered in pure SVG. Tracks 24-hour, 7-day, and 30-day uptime percentages with color-coded thresholds. Red dots highlight failed checks, and hovering reveals exact values and timestamps."
+        image="/assets/images/projects/status-detail.png"
+        imageAlt="Briarwood Status response time chart and uptime metrics"
+        reverse={true}
+      />
+
+      <FeatureBlock
+        title="Smart Alerting"
+        description="Email alerts triggered only after two consecutive failures to avoid false alarms from transient issues. Recovery alerts include total downtime duration. Optional deep health check support parses subsystem status from dedicated health endpoints."
+        image="/assets/images/projects/status-alerts.png"
+        imageAlt="Briarwood Status admin dashboard with monitor management"
+      />
+    </section>
+
+    <a class="text-lightpurple font-bold hover:underline" href="/">&larr; Back to Portfolio</a>
+  </div>
+</Base>

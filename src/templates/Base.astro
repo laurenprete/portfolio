@@ -32,5 +32,37 @@ const {
 
       <Footer />
     </div>
+    <!-- Lightbox overlay -->
+    <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 p-4 cursor-zoom-out">
+      <img id="lightbox-img" class="max-h-[90vh] max-w-[90vw] rounded-lg object-contain" />
+    </div>
+
+    <script>
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+
+      document.querySelectorAll('[data-lightbox]').forEach((img) => {
+        img.addEventListener('click', () => {
+          lightboxImg.src = img.src;
+          lightboxImg.alt = img.alt;
+          lightbox.classList.remove('hidden');
+          lightbox.classList.add('flex');
+        });
+      });
+
+      lightbox.addEventListener('click', () => {
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+        lightboxImg.src = '';
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+          lightbox.classList.add('hidden');
+          lightbox.classList.remove('flex');
+          lightboxImg.src = '';
+        }
+      });
+    </script>
   </body>
 </html>

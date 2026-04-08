@@ -33,9 +33,9 @@ const description = 'Lead generation and CRM platform for service businesses';
         campaign.
       </p>
       <p class="text-gray-200 leading-relaxed">
-        The platform includes real-time analytics, CRM synchronization with ServiceTitan,
-        and AI-assisted marketing tools. Built as a multi-tenant SaaS with a .NET 8 API
-        backend, Angular 19 frontend, and MySQL on AWS RDS.
+        The platform includes real-time analytics, third-party CRM integrations (ServiceTitan,
+        ElevateEngine, and more), and AI-assisted marketing tools. Built as a multi-tenant
+        SaaS with a .NET 8 API backend, Angular 19 frontend, and MySQL on AWS RDS.
       </p>
     </section>
 
@@ -58,17 +58,17 @@ const description = 'Lead generation and CRM platform for service businesses';
       />
 
       <FeatureBlock
-        title="CRM Integration"
-        description="Two-way synchronization with ServiceTitan via OAuth 2.0. Leads captured in GravMagnet automatically create customer records and jobs in ServiceTitan, eliminating double-entry and ensuring nothing falls through the cracks."
-        image="/assets/images/projects/gravmagnet-crm.png"
-        imageAlt="GravMagnet CRM integration settings"
-      />
-
-      <FeatureBlock
         title="Service Area Management"
         description="Define and visualize service areas using Google Places API. Forms automatically validate that incoming leads fall within the client's coverage zone, preventing wasted follow-ups on out-of-area requests."
         image="/assets/images/projects/gravmagnet-areas.png"
         imageAlt="GravMagnet service area map configuration"
+      />
+
+      <FeatureBlock
+        title="SMS Templates and Messaging"
+        description="Create reusable SMS templates with personalization variables like client name, business name, and form link. A guided wizard lets agents select a template, preview the message with variables filled in, and send via Twilio. Built-in rate limiting, opt-in enforcement, and delivery tracking keep messaging compliant and auditable."
+        image="/assets/images/projects/gravmagnet-sms.png"
+        imageAlt="GravMagnet SMS template management"
         reverse={true}
       />
 

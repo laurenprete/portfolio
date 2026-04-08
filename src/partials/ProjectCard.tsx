@@ -3,8 +3,8 @@ interface ProjectCardProps {
   title: string;
   tagline: string;
   techStack: string[];
-  label: string;
   link: string;
+  imagePosition?: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -12,8 +12,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   tagline,
   techStack,
-  label,
   link,
+  imagePosition = 'object-top',
 }) => (
   <a
     href={link}
@@ -22,13 +22,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     <img
       src={image}
       alt={title}
-      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+      className={`w-full h-64 object-cover ${imagePosition} group-hover:scale-105 transition-transform duration-300`}
     />
-    <div className="absolute top-3 right-3">
-      <span className="bg-darkpurple/80 text-lightpurple text-xs font-medium px-2 py-1 rounded">
-        {label}
-      </span>
-    </div>
     <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-darkpurple via-darkpurple/80 to-transparent p-4 pt-16">
       <h3 className="text-lg font-bold text-white mb-1">{title}</h3>
       <p className="text-gray-300 text-sm mb-2">{tagline}</p>

@@ -15,8 +15,9 @@ const description = 'Task planner and progress tracker for Old School RuneScape 
       tagline="Task planner and progress tracker for Old School RuneScape Leagues"
       image="/assets/images/projects/leagues-hero.png"
       techStack={['React', 'TypeScript', 'Java', 'RuneLite', 'AWS Lambda', 'DynamoDB']}
-      liveUrl="https://leagues-advisor.com"
+      liveUrl="https://leagues-advisor.com/about"
       githubUrl="https://github.com/laurenprete/leagues-advisor-sync"
+      githubLabel="View Plugin on GitHub"
     />
 
     <section class="mb-12">
@@ -28,15 +29,17 @@ const description = 'Task planner and progress tracker for Old School RuneScape 
         is crucial for maximizing your score.
       </p>
       <p class="text-gray-200 leading-relaxed mb-4">
-        Leagues Advisor is a two-part system: a web application for browsing and planning
-        task routes, and a RuneLite plugin that automatically syncs your character's
+        Leagues Advisor is a two-part system: a web application with intelligent task
+        scoring, and an open-source RuneLite plugin that automatically syncs character
         progress in real time. The plugin reads skill levels, quest completions, achievement
-        diaries, combat achievements, and collection log entries every 10 seconds and pushes
-        them to the web app.
+        diaries, and collection log entries every 10 seconds, keeping the web app's
+        recommendations current as you play.
       </p>
       <p class="text-gray-200 leading-relaxed">
-        The result is a live dashboard that shows exactly where you stand and which tasks
-        are within reach, so you can make informed decisions about what to do next.
+        The planner surfaces tasks across three views: Ready Now (completable immediately,
+        ranked by score), Almost Ready (grouped by what's blocking them, ranked by ROI
+        of the training needed), and a full filterable task browser. From there, players
+        build ordered routes for execution.
       </p>
     </section>
 
@@ -44,33 +47,25 @@ const description = 'Task planner and progress tracker for Old School RuneScape 
       <h2 class="text-2xl font-bold text-lightpurple mb-6">Features</h2>
 
       <FeatureBlock
-        title="RuneLite Plugin — Automatic Progress Sync"
-        description="A Java plugin for the RuneLite client that reads your character's state (skill levels, quest completions, achievement diaries, combat achievements, and collection log) and syncs it to the web app every 10 seconds. Uses a server-driven manifest system so new tracking variables can be added without a plugin update."
-        image="/assets/images/projects/leagues-plugin.png"
-        imageAlt="RuneLite plugin syncing character progress"
-      />
-
-      <FeatureBlock
-        title="Task Planning and Route Optimization"
-        description="Browse the full task list with filters for skill requirements, regions, and point values. Plan your route through tasks based on your current progress, seeing exactly which prerequisites you've already met."
+        title="Intelligent Task Scoring"
+        description="A multi-factor ranking algorithm scores every task by its efficiency, not just its point value. The system weighs effort estimation (parsing task descriptions for quantities and category-specific difficulty), relic synergy, geographic clustering for travel efficiency, milestone proximity for tier unlocks, and skill headroom. Each task gets tags explaining why it ranked well."
         image="/assets/images/projects/leagues-tasks.png"
-        imageAlt="Leagues Advisor task planning interface"
+        imageAlt="Leagues Advisor task scoring with ranked recommendations"
+      />
+
+      <FeatureBlock
+        title="Route Planner"
+        description="Build an ordered sequence of tasks and execute them one at a time. The current task is shown prominently with its requirements and blockers. Drag and drop to reorder upcoming steps. A route summary projects your total points, tier progression, and exactly which step crosses into each new unlock tier."
+        image="/assets/images/projects/leagues-planner.png"
+        imageAlt="Leagues Advisor route planner with drag-and-drop reordering"
         reverse={true}
       />
 
       <FeatureBlock
-        title="Live Progress Dashboard"
-        description="See your character's progress at a glance: completed tasks, points earned, skills trained, and quests finished. Updated in real time as the RuneLite plugin syncs new data."
+        title="Progress Tracking and Milestones"
+        description="A live dashboard shows points earned, tasks completed, and progress toward the next relic tier unlock. The RuneLite plugin syncs character state every 10 seconds, so recommendations update as you play. Milestone tracking visualizes exactly how many points remain until your next unlock."
         image="/assets/images/projects/leagues-dashboard.png"
-        imageAlt="Leagues Advisor progress dashboard"
-      />
-
-      <FeatureBlock
-        title="Collection and Achievement Tracking"
-        description="Track collection log items with full snapshot and real-time new item detection. Combat achievements are captured via chat message parsing, giving comprehensive coverage of all league scoring categories."
-        image="/assets/images/projects/leagues-collection.png"
-        imageAlt="Leagues Advisor collection log tracking"
-        reverse={true}
+        imageAlt="Leagues Advisor milestone and progress tracking"
       />
     </section>
 

@@ -16,6 +16,7 @@ const description = 'Photography portfolio and fine art print store';
       image="/assets/images/projects/starstuff-hero.png"
       techStack={['Next.js', 'React 19', 'Prisma', 'Stripe', 'CloudFront', 'AWS']}
       liveUrl="https://starstuffphotos.com"
+      imagePosition="object-center"
     />
 
     <section class="mb-12">
@@ -62,14 +63,6 @@ const description = 'Photography portfolio and fine art print store';
         description="A full content management system where the photographer manages galleries, uploads photos, configures products and pricing, tracks orders, and edits site content. No code required."
         image="/assets/images/projects/starstuff-admin.png"
         imageAlt="StarStuff Photos admin CMS dashboard"
-      />
-
-      <FeatureBlock
-        title="Image Processing Pipeline"
-        description="When a photo is uploaded, it's stored in Backblaze B2. A Lambda function generates optimized variants in JPEG, WebP, and AVIF at multiple sizes. CloudFront CDN serves the best format based on the visitor's browser, keeping load times fast."
-        image="/assets/images/projects/starstuff-pipeline.png"
-        imageAlt="StarStuff Photos image processing architecture"
-        reverse={true}
       />
     </section>
 

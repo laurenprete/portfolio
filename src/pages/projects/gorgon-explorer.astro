@@ -5,37 +5,39 @@ import FeatureBlock from '@/components/FeatureBlock.astro';
 import { AppConfig } from '@/utils/AppConfig';
 
 const title = `GorgonExplorer | ${AppConfig.title}`;
-const description = 'Interactive game data explorer for Project: Gorgon MMO';
+const description = 'Build planner and game data explorer for Project: Gorgon MMO';
 ---
 
 <Base head={{ title, description }}>
   <div class="max-w-4xl mx-auto">
     <ProjectHero
       title="GorgonExplorer"
-      tagline="Interactive game data explorer for Project: Gorgon MMO"
+      tagline="Build planner and game data explorer for Project: Gorgon MMO"
       image="/assets/images/projects/gorgon-hero.png"
       techStack={['React 19', 'TypeScript', 'Hono', 'Tailwind CSS', 'DynamoDB', 'Lambda', 'shadcn/ui']}
       liveUrl="https://gorgonexplorer.com"
-      githubUrl="https://github.com/laurenprete/gorgon-explorer"
     />
 
     <section class="mb-12">
       <h2 class="text-2xl font-bold text-lightpurple mb-4">The Story</h2>
       <p class="text-gray-200 leading-relaxed mb-4">
-        Project: Gorgon is a niche MMO with a passionate community but limited tooling
-        for browsing and understanding game data. Players relied on wikis and scattered
-        spreadsheets to look up item stats, skill synergies, and progression paths.
+        Project: Gorgon is a classless MMO where players mix and match combat skills,
+        gear mods, and abilities to create unique builds. The community has built a solid
+        set of tools over the years, but there wasn't a dedicated build planner that let
+        players plan out their skill combinations, mod selections, and ability hotbars
+        in one place.
       </p>
       <p class="text-gray-200 leading-relaxed mb-4">
-        I built GorgonExplorer as a modern web app that pulls publicly available game data
-        and presents it through a clean, searchable interface with data visualization.
-        The backend syncs game data into DynamoDB via a scheduled data pipeline, and
-        a Hono API serves it to a React frontend with responsive tables and charts.
+        GorgonExplorer fills that gap. The build planner is the flagship feature, letting
+        players pick two combat skills, assign mods across equipment slots, configure ability
+        hotbars, and save or share their builds. Alongside the planner, the site provides
+        browsable databases for items, mods, recipes, equipment, and NPCs, plus a DPS
+        estimator that parses combat logs.
       </p>
       <p class="text-gray-200 leading-relaxed">
-        The app is fully serverless on AWS: Lambda functions behind API Gateway,
-        DynamoDB for storage, and the frontend deployed as a static site. Infrastructure
-        is managed with AWS CDK.
+        The app is fully serverless on AWS: a Hono API on Lambda, DynamoDB for build storage,
+        game data synced from a CDN, and infrastructure managed with AWS CDK. Authentication
+        supports both email/password and Google OAuth via Cognito.
       </p>
     </section>
 
@@ -43,33 +45,25 @@ const description = 'Interactive game data explorer for Project: Gorgon MMO';
       <h2 class="text-2xl font-bold text-lightpurple mb-6">Features</h2>
 
       <FeatureBlock
-        title="Searchable Game Data"
-        description="Browse and filter game data through responsive, sortable tables powered by TanStack Table. Find items, skills, and recipes instantly with full-text search and column filtering."
+        title="Build Planner"
+        description="Select two combat skills, browse and assign mods to each equipment slot, configure ability hotbars with drag-and-drop, and see which mods enhance which abilities. Builds can be saved to your account, shared publicly, or copied from other players."
+        image="/assets/images/projects/gorgon-build-planner.png"
+        imageAlt="GorgonExplorer build planner with skill and mod selection"
+      />
+
+      <FeatureBlock
+        title="Build Search"
+        description="Browse community builds filtered by skill combination, search by name or description, and copy interesting builds to use as a starting point for your own. Public builds are indexed and searchable across the entire user base."
+        image="/assets/images/projects/gorgon-build-search.png"
+        imageAlt="GorgonExplorer community build search"
+        reverse={true}
+      />
+
+      <FeatureBlock
+        title="Game Data Explorer"
+        description="Sortable, filterable tables for items, mods, recipes, equipment, and NPCs. Powered by TanStack Table with full-text search, multi-select column filters, and rarity color coding. All data synced from the game's public data files."
         image="/assets/images/projects/gorgon-data-tables.png"
         imageAlt="GorgonExplorer data tables with search and filtering"
-      />
-
-      <FeatureBlock
-        title="Data Visualization"
-        description="Interactive charts built with Recharts help players visualize skill progression, item distributions, and other game data patterns that are hard to see in raw tables."
-        image="/assets/images/projects/gorgon-charts.png"
-        imageAlt="GorgonExplorer data visualization charts"
-        reverse={true}
-      />
-
-      <FeatureBlock
-        title="Serverless Architecture"
-        description="Fully serverless on AWS with a Hono API on Lambda, DynamoDB for storage, and a scheduled data sync pipeline that keeps game data fresh. Infrastructure defined and deployed with AWS CDK."
-        image="/assets/images/projects/gorgon-architecture.png"
-        imageAlt="GorgonExplorer serverless architecture diagram"
-      />
-
-      <FeatureBlock
-        title="Modern UI with shadcn/ui"
-        description="Clean, accessible interface built with shadcn/ui and Tailwind CSS. Responsive design works seamlessly on desktop and mobile, with dark mode that matches the game's aesthetic."
-        image="/assets/images/projects/gorgon-mobile.png"
-        imageAlt="GorgonExplorer responsive mobile view"
-        reverse={true}
       />
     </section>
 

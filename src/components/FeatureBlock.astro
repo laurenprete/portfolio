@@ -20,7 +20,8 @@ const { title, description, image, imageAlt, reverse = false } = Astro.props;
     <img
       src={image}
       alt={imageAlt}
-      class="rounded-lg shadow-xl w-full"
+      class="rounded-lg shadow-xl w-full cursor-zoom-in"
+      data-lightbox
     />
   </div>
   <div class="md:w-1/2">

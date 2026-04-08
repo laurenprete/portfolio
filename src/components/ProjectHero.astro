@@ -6,16 +6,19 @@ interface Props {
   techStack: string[];
   liveUrl?: string;
   githubUrl?: string;
+  githubLabel?: string;
+  imagePosition?: string;
 }
 
-const { title, tagline, image, techStack, liveUrl, githubUrl } = Astro.props;
+const { title, tagline, image, techStack, liveUrl, githubUrl, githubLabel = 'View on GitHub', imagePosition = 'object-top' } = Astro.props;
 ---
 
 <div class="mb-12">
   <img
     src={image}
     alt={title}
-    class="w-full h-48 md:h-72 lg:h-80 object-cover rounded-lg shadow-2xl"
+    class:list={[`w-full h-48 md:h-72 lg:h-80 object-cover rounded-lg shadow-2xl cursor-zoom-in`, imagePosition]}
+    data-lightbox
   />
   <div class="mt-6">
     <h1 class="text-3xl lg:text-4xl font-bold text-lightpurple mb-2">
@@ -47,7 +50,7 @@ const { title, tagline, image, techStack, liveUrl, githubUrl } = Astro.props;
           rel="noopener noreferrer"
           class="text-lightblue font-semibold hover:underline"
         >
-          View on GitHub &rarr;
+          {githubLabel} &rarr;
         </a>
       )}
     </div>

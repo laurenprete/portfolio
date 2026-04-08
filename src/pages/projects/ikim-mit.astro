@@ -31,8 +31,8 @@ const description = 'Custom WordPress platform for MIT manufacturing research in
         I built a custom WordPress theme with a modern design and custom Gutenberg blocks
         that let the IKIM team create visually rich pages without developer involvement.
         Alongside the theme, I developed a gated content plugin that supports two-tier
-        access control: email-based temporary tokens for casual access and full WordPress
-        accounts for consortium members.
+        access control: email-based temporary tokens for casual access and dedicated
+        member accounts for consortium members.
       </p>
       <p class="text-gray-200 leading-relaxed">
         Sensitive documents are stored in AWS S3 and delivered via time-limited presigned
@@ -52,18 +52,11 @@ const description = 'Custom WordPress platform for MIT manufacturing research in
       />
 
       <FeatureBlock
-        title="Two-Tier Gated Content"
-        description="Tier B access uses email-based 24-hour tokens. Visitors request access, receive a magic link, and can view gated content for a day. Tier C requires a full WordPress account for ongoing access to consortium resources. Content and individual files can each be assigned their own access tier."
+        title="Gated Content and Secure File Delivery"
+        description="Two access tiers protect sensitive resources. Public Gated Access lets visitors request a magic link via email for 24-hour access. Members Only requires a dedicated account with token-based authentication, managed through custom database tables independent of WordPress's user system. Files are stored in AWS S3 and delivered via time-limited presigned URLs, so nothing can be bookmarked or shared by direct link."
         image="/assets/images/projects/ikim-gated.png"
         imageAlt="IKIM gated content access management"
         reverse={true}
-      />
-
-      <FeatureBlock
-        title="Secure File Delivery via S3"
-        description="Documents are stored in AWS S3 rather than on the WordPress server. When an authorized user requests a file, the plugin generates a time-limited presigned URL. Files can't be bookmarked or shared via direct link, so access is always validated."
-        image="/assets/images/projects/ikim-files.png"
-        imageAlt="IKIM secure file download with S3 presigned URLs"
       />
 
       <FeatureBlock
@@ -71,8 +64,24 @@ const description = 'Custom WordPress platform for MIT manufacturing research in
         description="Built-in newsletter subscription and distribution system integrated with the WordPress admin. The IKIM team manages subscriber lists and sends updates about programs, events, and research directly from their WordPress dashboard."
         image="/assets/images/projects/ikim-newsletter.png"
         imageAlt="IKIM newsletter management interface"
-        reverse={true}
       />
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-lightpurple mb-6">What the Client Said</h2>
+      <div class="border-l-4 border-lightpurple pl-6 py-4">
+        <blockquote class="text-gray-200 leading-relaxed italic text-lg mb-4">
+          "Lauren Prete developed a custom website from the ground up in support of multiple MIT-led research and education initiatives. She delivered a streamlined, user-friendly, and highly effective platform that successfully integrates complex scientific and educational content for both general audiences and technical experts. Lauren is fast, thoughtful, and proactive—anticipating challenges and delivering practical solutions with professionalism and ease. She was a pleasure to work with, and the MIT team wholeheartedly recommends her."
+        </blockquote>
+        <div class="flex items-center gap-4">
+          <img src="/assets/images/projects/anthony.avif" alt="Anthony Salazar" class="w-12 h-12 rounded-full object-cover" />
+          <div>
+            <p class="text-lightpurple font-semibold">Anthony Salazar</p>
+            <p class="text-gray-400 text-sm">Program Manager, MIT Microphotonics Center &amp; Initiative for Knowledge and Innovation in Manufacturing</p>
+            <p class="text-gray-400 text-sm">Massachusetts Institute of Technology</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <a class="text-lightpurple font-bold hover:underline" href="/">&larr; Back to Portfolio</a>
