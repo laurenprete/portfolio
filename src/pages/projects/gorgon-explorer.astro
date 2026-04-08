@@ -1,0 +1,78 @@
+---
+import Base from '@/templates/Base.astro';
+import ProjectHero from '@/components/ProjectHero.astro';
+import FeatureBlock from '@/components/FeatureBlock.astro';
+import { AppConfig } from '@/utils/AppConfig';
+
+const title = `GorgonExplorer | ${AppConfig.title}`;
+const description = 'Interactive game data explorer for Project: Gorgon MMO';
+---
+
+<Base head={{ title, description }}>
+  <div class="max-w-4xl mx-auto">
+    <ProjectHero
+      title="GorgonExplorer"
+      tagline="Interactive game data explorer for Project: Gorgon MMO"
+      image="/assets/images/projects/gorgon-hero.png"
+      techStack={['React 19', 'TypeScript', 'Hono', 'Tailwind CSS', 'DynamoDB', 'Lambda', 'shadcn/ui']}
+      liveUrl="https://gorgonexplorer.com"
+      githubUrl="https://github.com/laurenprete/gorgon-explorer"
+    />
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-lightpurple mb-4">The Story</h2>
+      <p class="text-gray-200 leading-relaxed mb-4">
+        Project: Gorgon is a niche MMO with a passionate community but limited tooling
+        for browsing and understanding game data. Players relied on wikis and scattered
+        spreadsheets to look up item stats, skill synergies, and progression paths.
+      </p>
+      <p class="text-gray-200 leading-relaxed mb-4">
+        I built GorgonExplorer as a modern web app that pulls publicly available game data
+        and presents it through a clean, searchable interface with data visualization.
+        The backend syncs game data into DynamoDB via a scheduled data pipeline, and
+        a Hono API serves it to a React frontend with responsive tables and charts.
+      </p>
+      <p class="text-gray-200 leading-relaxed">
+        The app is fully serverless on AWS — Lambda functions behind API Gateway,
+        DynamoDB for storage, and the frontend deployed as a static site. Infrastructure
+        is managed with AWS CDK.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-lightpurple mb-6">Features</h2>
+
+      <FeatureBlock
+        title="Searchable Game Data"
+        description="Browse and filter game data through responsive, sortable tables powered by TanStack Table. Find items, skills, and recipes instantly with full-text search and column filtering."
+        image="/assets/images/projects/gorgon-data-tables.png"
+        imageAlt="GorgonExplorer data tables with search and filtering"
+      />
+
+      <FeatureBlock
+        title="Data Visualization"
+        description="Interactive charts built with Recharts help players visualize skill progression, item distributions, and other game data patterns that are hard to see in raw tables."
+        image="/assets/images/projects/gorgon-charts.png"
+        imageAlt="GorgonExplorer data visualization charts"
+        reverse={true}
+      />
+
+      <FeatureBlock
+        title="Serverless Architecture"
+        description="Fully serverless on AWS — a Hono API on Lambda, DynamoDB for storage, and a scheduled data sync pipeline that keeps game data fresh. Infrastructure defined and deployed with AWS CDK."
+        image="/assets/images/projects/gorgon-architecture.png"
+        imageAlt="GorgonExplorer serverless architecture diagram"
+      />
+
+      <FeatureBlock
+        title="Modern UI with shadcn/ui"
+        description="Clean, accessible interface built with shadcn/ui and Tailwind CSS. Responsive design works seamlessly on desktop and mobile, with dark mode that matches the game's aesthetic."
+        image="/assets/images/projects/gorgon-mobile.png"
+        imageAlt="GorgonExplorer responsive mobile view"
+        reverse={true}
+      />
+    </section>
+
+    <a class="text-lightpurple font-bold hover:underline" href="/">&larr; Back to Portfolio</a>
+  </div>
+</Base>
