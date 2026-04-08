@@ -1,0 +1,78 @@
+---
+import Base from '@/templates/Base.astro';
+import ProjectHero from '@/components/ProjectHero.astro';
+import FeatureBlock from '@/components/FeatureBlock.astro';
+import { AppConfig } from '@/utils/AppConfig';
+
+const title = `StarStuff Photos | ${AppConfig.title}`;
+const description = 'Photography portfolio and fine art print store';
+---
+
+<Base head={{ title, description }}>
+  <div class="max-w-4xl mx-auto">
+    <ProjectHero
+      title="StarStuff Photos"
+      tagline="Photography portfolio and fine art print store"
+      image="/assets/images/projects/starstuff-hero.png"
+      techStack={['Next.js', 'React 19', 'Prisma', 'Stripe', 'CloudFront', 'AWS']}
+      liveUrl="https://starstuffphotos.com"
+    />
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-lightpurple mb-4">The Story</h2>
+      <p class="text-gray-200 leading-relaxed mb-4">
+        Photographer Adam Balbi needed more than a gallery site — he needed a platform
+        where visitors could browse his landscape, astrophotography, and nature work,
+        then seamlessly order fine art prints in various sizes and finishes. And he needed
+        to manage it all himself without touching code.
+      </p>
+      <p class="text-gray-200 leading-relaxed mb-4">
+        StarStuff Photos delivers both sides: a polished public storefront with gallery
+        browsing, lightbox viewing, and Stripe-powered print ordering, plus a full admin
+        CMS where Adam manages galleries, products, orders, and site content. The image
+        pipeline automatically generates optimized variants (JPEG, WebP, AVIF) via a
+        Lambda function and serves them through CloudFront CDN.
+      </p>
+      <p class="text-gray-200 leading-relaxed">
+        Built with Next.js App Router, Prisma on PostgreSQL (Supabase), and deployed on
+        AWS Amplify. Authentication is handled by Cognito with admin group-based access control.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-lightpurple mb-6">Features</h2>
+
+      <FeatureBlock
+        title="Gallery and Lightbox"
+        description="Visitors browse photos organized by gallery with a responsive masonry-style layout. Clicking a photo opens a full-screen lightbox with high-resolution viewing, navigation between images, and direct links to order prints."
+        image="/assets/images/projects/starstuff-gallery.png"
+        imageAlt="StarStuff Photos gallery with lightbox viewing"
+      />
+
+      <FeatureBlock
+        title="Print Ordering with Stripe"
+        description="Customers select print size, finish, and framing options, add to cart (persisted via cookies), and check out through Stripe. Order confirmation emails go out automatically, and order status is tracked through the admin dashboard."
+        image="/assets/images/projects/starstuff-checkout.png"
+        imageAlt="StarStuff Photos print ordering and checkout flow"
+        reverse={true}
+      />
+
+      <FeatureBlock
+        title="Admin CMS"
+        description="A full content management system where the photographer manages galleries, uploads photos, configures products and pricing, tracks orders, and edits site content (homepage, about page, contact info) — all without touching code."
+        image="/assets/images/projects/starstuff-admin.png"
+        imageAlt="StarStuff Photos admin CMS dashboard"
+      />
+
+      <FeatureBlock
+        title="Image Processing Pipeline"
+        description="When a photo is uploaded, it's stored in Backblaze B2. A Lambda function generates optimized variants in JPEG, WebP, and AVIF at multiple sizes. CloudFront CDN serves the best format based on the visitor's browser, keeping load times fast."
+        image="/assets/images/projects/starstuff-pipeline.png"
+        imageAlt="StarStuff Photos image processing architecture"
+        reverse={true}
+      />
+    </section>
+
+    <a class="text-lightpurple font-bold hover:underline" href="/">&larr; Back to Portfolio</a>
+  </div>
+</Base>
