@@ -59,7 +59,7 @@ const Hero = () => (
           <a
             className="font-semibold text-lightblue"
             target="_blank"
-            href="assets/docs/LaurenPrete_Resume2025.pdf"
+            href="assets/docs/LaurenPrete_Resume2026.pdf"
           >resume</a> or find me on{' '}
           <a
             className="font-semibold text-lightblue"
