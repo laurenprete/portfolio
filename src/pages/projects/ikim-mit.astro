@@ -1,0 +1,80 @@
+---
+import Base from '@/templates/Base.astro';
+import ProjectHero from '@/components/ProjectHero.astro';
+import FeatureBlock from '@/components/FeatureBlock.astro';
+import { AppConfig } from '@/utils/AppConfig';
+
+const title = `IKIM MIT | ${AppConfig.title}`;
+const description = 'Custom WordPress platform for MIT manufacturing research initiative';
+---
+
+<Base head={{ title, description }}>
+  <div class="max-w-4xl mx-auto">
+    <ProjectHero
+      title="IKIM MIT"
+      tagline="Custom WordPress platform for MIT's manufacturing research initiative"
+      image="/assets/images/projects/ikim-hero.png"
+      techStack={['WordPress', 'PHP', 'Gutenberg', 'AWS S3', 'JavaScript']}
+      liveUrl="https://ikim.mit.edu"
+    />
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-lightpurple mb-4">The Story</h2>
+      <p class="text-gray-200 leading-relaxed mb-4">
+        MIT's Initiative for Knowledge and Innovation in Manufacturing (IKIM) brings
+        together researchers, industry partners, and students working on the future of
+        U.S. manufacturing. They needed a modern website that could serve multiple audiences —
+        public-facing content about their programs, gated resources for consortium members,
+        and newsletter distribution to keep stakeholders informed.
+      </p>
+      <p class="text-gray-200 leading-relaxed mb-4">
+        I built a custom WordPress theme with a modern design and custom Gutenberg blocks
+        that let the IKIM team create visually rich pages without developer involvement.
+        Alongside the theme, I developed a gated content plugin that supports two-tier
+        access control — email-based temporary tokens for casual access and full WordPress
+        accounts for consortium members.
+      </p>
+      <p class="text-gray-200 leading-relaxed">
+        Sensitive documents are stored in AWS S3 and delivered via time-limited presigned
+        URLs, ensuring that gated files can't be shared via direct link. The platform also
+        includes newsletter management and comprehensive security hardening.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-lightpurple mb-6">Features</h2>
+
+      <FeatureBlock
+        title="Custom Gutenberg Blocks"
+        description="Three purpose-built blocks — Hero, Content Grid, and Icon Columns — let the IKIM team create visually consistent, on-brand pages directly in the WordPress editor. No custom code needed for new pages."
+        image="/assets/images/projects/ikim-blocks.png"
+        imageAlt="IKIM custom Gutenberg block editor"
+      />
+
+      <FeatureBlock
+        title="Two-Tier Gated Content"
+        description="Tier B access uses email-based 24-hour tokens — visitors request access, receive a magic link, and can view gated content for a day. Tier C requires a full WordPress account for ongoing access to consortium resources. Content and individual files can each be assigned their own access tier."
+        image="/assets/images/projects/ikim-gated.png"
+        imageAlt="IKIM gated content access management"
+        reverse={true}
+      />
+
+      <FeatureBlock
+        title="Secure File Delivery via S3"
+        description="Documents are stored in AWS S3 rather than on the WordPress server. When an authorized user requests a file, the plugin generates a time-limited presigned URL. Files can't be bookmarked or shared via direct link — access is always validated."
+        image="/assets/images/projects/ikim-files.png"
+        imageAlt="IKIM secure file download with S3 presigned URLs"
+      />
+
+      <FeatureBlock
+        title="Newsletter Management"
+        description="Built-in newsletter subscription and distribution system integrated with the WordPress admin. The IKIM team manages subscriber lists and sends updates about programs, events, and research directly from their WordPress dashboard."
+        image="/assets/images/projects/ikim-newsletter.png"
+        imageAlt="IKIM newsletter management interface"
+        reverse={true}
+      />
+    </section>
+
+    <a class="text-lightpurple font-bold hover:underline" href="/">&larr; Back to Portfolio</a>
+  </div>
+</Base>
