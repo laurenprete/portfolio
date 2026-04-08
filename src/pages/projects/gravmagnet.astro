@@ -1,0 +1,85 @@
+---
+import Base from '@/templates/Base.astro';
+import ProjectHero from '@/components/ProjectHero.astro';
+import FeatureBlock from '@/components/FeatureBlock.astro';
+import { AppConfig } from '@/utils/AppConfig';
+
+const title = `GravMagnet | ${AppConfig.title}`;
+const description = 'Lead generation and CRM platform for service businesses';
+---
+
+<Base head={{ title, description }}>
+  <div class="max-w-4xl mx-auto">
+    <ProjectHero
+      title="GravMagnet"
+      tagline="Lead generation and CRM platform for service businesses"
+      image="/assets/images/projects/gravmagnet-hero.png"
+      techStack={['.NET 8', 'Angular 19', 'MySQL', 'AWS', 'SendGrid', 'OpenAI']}
+    />
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-lightpurple mb-4">The Story</h2>
+      <p class="text-gray-200 leading-relaxed mb-4">
+        Service businesses like HVAC companies, plumbers, and electricians generate leads
+        from dozens of sources — Facebook groups, neighborhood apps, referral networks —
+        but most don't have a system for capturing and tracking those leads consistently.
+        They end up scattered across text messages, emails, and sticky notes.
+      </p>
+      <p class="text-gray-200 leading-relaxed mb-4">
+        GravMagnet solves this with branded intake forms that each get a unique short link.
+        A technician can drop their form link in a Facebook group comment, a neighborhood
+        app post, or a text message. When a homeowner fills it out, the lead flows into
+        GravMagnet's dashboard with full attribution — which form, which channel, which
+        campaign.
+      </p>
+      <p class="text-gray-200 leading-relaxed">
+        The platform includes real-time analytics, CRM synchronization with ServiceTitan,
+        and AI-assisted marketing tools. Built as a multi-tenant SaaS with a .NET 8 API
+        backend, Angular 19 frontend, and MySQL on AWS RDS.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-lightpurple mb-6">Features</h2>
+
+      <FeatureBlock
+        title="Branded Lead Capture Forms"
+        description="Each client gets branded intake forms with unique short links powered by Sqids. Forms are embeddable, shareable, and track attribution automatically — every submission records which form, channel, and campaign generated the lead."
+        image="/assets/images/projects/gravmagnet-forms.png"
+        imageAlt="GravMagnet branded lead capture form builder"
+      />
+
+      <FeatureBlock
+        title="Real-Time Analytics Dashboard"
+        description="Track impressions, conversions, and abandonment rates across all forms and campaigns. Visualize lead flow with Chart.js, identify top-performing channels, and spot drop-off points in the capture funnel."
+        image="/assets/images/projects/gravmagnet-analytics.png"
+        imageAlt="GravMagnet analytics dashboard with conversion metrics"
+        reverse={true}
+      />
+
+      <FeatureBlock
+        title="CRM Integration"
+        description="Two-way synchronization with ServiceTitan via OAuth 2.0. Leads captured in GravMagnet automatically create customer records and jobs in ServiceTitan, eliminating double-entry and ensuring nothing falls through the cracks."
+        image="/assets/images/projects/gravmagnet-crm.png"
+        imageAlt="GravMagnet CRM integration settings"
+      />
+
+      <FeatureBlock
+        title="Service Area Management"
+        description="Define and visualize service areas using Google Places API. Forms automatically validate that incoming leads fall within the client's coverage zone, preventing wasted follow-ups on out-of-area requests."
+        image="/assets/images/projects/gravmagnet-areas.png"
+        imageAlt="GravMagnet service area map configuration"
+        reverse={true}
+      />
+
+      <FeatureBlock
+        title="AI-Powered Marketing Assist"
+        description="Generate compelling call-to-action posts for Facebook groups and neighborhood apps using OpenAI. The system suggests posts tailored to the client's services and target neighborhoods, ready to copy and paste with the intake form link attached."
+        image="/assets/images/projects/gravmagnet-ai.png"
+        imageAlt="GravMagnet AI-generated marketing post suggestions"
+      />
+    </section>
+
+    <a class="text-lightpurple font-bold hover:underline" href="/">&larr; Back to Portfolio</a>
+  </div>
+</Base>
