@@ -43,6 +43,18 @@ const Hero = () => (
           conveying technical information, and managing projects and roadmaps.
         </p>
         <p className="py-2">
+          I also run{' '}
+          <a
+            className="font-semibold text-lightblue"
+            target="_blank"
+            href="https://briarwoodsoftware.com"
+          >
+            Briarwood Software
+          </a>
+          , a consulting firm where I build custom web applications and software
+          integrations for clients across e-commerce, education, and service industries.
+        </p>
+        <p className="py-2">
           Want to get in touch? You can read my{' '}
           <a
             className="font-semibold text-lightblue"

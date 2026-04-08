@@ -2,11 +2,11 @@ import ProjectCard from './ProjectCard';
 
 const clientWork = [
   {
-    image: '/assets/images/projects/gravmagnet-hero.png',
-    title: 'GravMagnet',
-    tagline: 'Lead generation and CRM platform for service businesses',
-    techStack: ['.NET 8', 'Angular', 'MySQL', 'AWS'],
-    link: '/projects/gravmagnet/',
+    image: '/assets/images/projects/ikim-hero.png',
+    title: 'IKIM MIT',
+    tagline: 'Custom WordPress platform for MIT manufacturing research',
+    techStack: ['WordPress', 'PHP', 'Gutenberg', 'AWS S3'],
+    link: '/projects/ikim-mit/',
   },
   {
     image: '/assets/images/projects/starstuff-hero.png',
@@ -17,11 +17,11 @@ const clientWork = [
     imagePosition: 'object-center',
   },
   {
-    image: '/assets/images/projects/ikim-hero.png',
-    title: 'IKIM MIT',
-    tagline: 'Custom WordPress platform for MIT manufacturing research',
-    techStack: ['WordPress', 'PHP', 'Gutenberg', 'AWS S3'],
-    link: '/projects/ikim-mit/',
+    image: '/assets/images/projects/gravmagnet-hero.png',
+    title: 'GravMagnet',
+    tagline: 'Lead generation and CRM platform for service businesses',
+    techStack: ['.NET 8', 'Angular', 'MySQL', 'AWS'],
+    link: '/projects/gravmagnet/',
   },
   {
     image: '/assets/images/projects/inkdex-hero.png',
