@@ -6,6 +6,7 @@ const skills = [
   'Angular',
   'React',
   'Next.js',
+  'Astro',
   'Tailwind CSS',
   'Hono',
   'SQL',
