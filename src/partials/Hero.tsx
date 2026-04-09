@@ -13,7 +13,6 @@ const skills = [
   'Docker',
   'CI/CD',
   'AWS',
-  'Azure',
 ];
 const Hero = () => (
   <div>
