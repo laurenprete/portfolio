@@ -5,7 +5,7 @@ const clientWork = [
     image: '/assets/images/projects/ikim-hero.png',
     title: 'IKIM MIT',
     tagline: 'Custom WordPress platform for MIT manufacturing research',
-    techStack: ['WordPress', 'PHP', 'Gutenberg', 'AWS S3'],
+    techStack: ['WordPress', 'PHP', 'Gutenberg', 'S3'],
     link: '/projects/ikim-mit/',
   },
   {
@@ -20,14 +20,14 @@ const clientWork = [
     image: '/assets/images/projects/gravmagnet-hero.png',
     title: 'GravMagnet',
     tagline: 'Lead generation and CRM platform for service businesses',
-    techStack: ['.NET 8', 'Angular', 'MySQL', 'AWS'],
+    techStack: ['.NET', 'Angular', 'MySQL', 'AWS', 'OpenAI'],
     link: '/projects/gravmagnet/',
   },
   {
     image: '/assets/images/projects/inkdex-hero.png',
     title: 'GPI InkDex',
     tagline: 'AI-powered SEO audit and content generation for Shopify',
-    techStack: ['Next.js', 'Claude API', 'Shopify GraphQL', 'AWS'],
+    techStack: ['Next.js', 'Shopify GraphQL', 'Claude API', 'Amplify'],
     link: '/projects/inkdex/',
   },
 ];
@@ -44,7 +44,7 @@ const sideProjects = [
     image: '/assets/images/projects/leagues-hero.png',
     title: 'Leagues Advisor',
     tagline: 'Task planner and progress tracker for OSRS Leagues',
-    techStack: ['React', 'Java', 'RuneLite', 'AWS'],
+    techStack: ['React', 'Java', 'RuneLite', 'Lambda', 'DynamoDB'],
     link: '/projects/leagues-advisor/',
   },
   {
