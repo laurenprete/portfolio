@@ -43,7 +43,12 @@ const Hero = () => (
           conveying technical information, and managing projects and roadmaps.
         </p>
         <p className="py-2">
-          I also run{' '}
+          I'm a Software Engineer Lead at{' '}
+          <span className="font-semibold text-white">
+            North Atlantic Industries
+          </span>
+          , where I build internal tools and automation for embedded computing
+          products in the aerospace and defense space. I also run{' '}
           <a
             className="font-semibold text-lightblue"
             target="_blank"

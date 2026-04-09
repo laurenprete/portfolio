@@ -13,7 +13,8 @@ interface Props {
 const { title, tagline, image, techStack, liveUrl, githubUrl, githubLabel = 'View on GitHub', imagePosition = 'object-top' } = Astro.props;
 ---
 
-<div class="mb-12">
+<a class="text-lightpurple font-bold hover:underline" href="/">&larr; Back to Portfolio</a>
+<div class="mb-12 mt-6">
   <img
     src={image}
     alt={title}
