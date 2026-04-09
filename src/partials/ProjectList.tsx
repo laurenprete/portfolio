@@ -27,7 +27,7 @@ const clientWork = [
     image: '/assets/images/projects/inkdex-hero.png',
     title: 'GPI InkDex',
     tagline: 'AI-powered SEO audit and content generation for Shopify',
-    techStack: ['Next.js', 'Shopify GraphQL', 'Claude API', 'Amplify'],
+    techStack: ['React', 'Hono', 'Claude API', 'Shopify', 'Amplify'],
     link: '/projects/inkdex/',
   },
 ];
