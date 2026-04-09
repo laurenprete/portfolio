@@ -3,7 +3,6 @@ const skills = [
   '.NET',
   'TypeScript',
   'Java',
-  'Python',
   'Angular',
   'React',
   'Next.js',
