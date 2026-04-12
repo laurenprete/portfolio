@@ -28,25 +28,20 @@ const description = 'Custom WordPress platform for MIT manufacturing research in
         and newsletter distribution to keep stakeholders informed.
       </p>
       <p class="text-gray-200 leading-relaxed mb-4">
-        The IKIM team had previously struggled with a patchwork of off-the-shelf WordPress
-        plugins that created an inconsistent editing experience and required constant support.
-        I built a custom theme with 13 purpose-built Gutenberg blocks tailored to their
-        vocabulary and use cases. Instead of handing them a generic toolkit, I designed each
-        block around how they actually think about their content, giving them a consistent,
-        predictable editing experience. This also made it much easier to provide focused
-        support without debugging third-party plugin conflicts.
-      </p>
-      <p class="text-gray-200 leading-relaxed mb-4">
-        Many of the blocks integrate directly with other parts of the system. The Gated
-        Content File and File Showcase blocks pull from the gated content library and respect
-        access tiers. The News and Resources blocks filter by category and tag. The Members
-        Only Container wraps any content in access-controlled visibility. Everything works
-        together because it was designed to.
+        Alongside a custom theme with 13 purpose-built Gutenberg blocks, I developed a
+        gated content plugin with two-tier access control: email-based temporary tokens
+        for public gated access and dedicated member accounts with token-based authentication
+        for consortium resources. Sensitive documents are stored in AWS S3 and delivered
+        via time-limited presigned URLs, so nothing can be bookmarked or shared by direct
+        link. The platform also includes newsletter management and comprehensive security
+        hardening.
       </p>
       <p class="text-gray-200 leading-relaxed">
-        Sensitive documents are stored in AWS S3 and delivered via time-limited presigned
-        URLs, ensuring that gated files can't be shared via direct link. The platform also
-        includes newsletter management and comprehensive security hardening.
+        The IKIM team had previously struggled with a patchwork of off-the-shelf plugins
+        that created an inconsistent editing experience. Instead of a generic toolkit, I
+        designed each block around how they actually think about their content, with many
+        blocks integrating directly with the gated content system. This gave them a
+        predictable editing experience and made it easier to provide focused support.
       </p>
     </section>
 
