@@ -26,7 +26,7 @@ const Hero = () => (
           <span className="font-semibold text-white">
             full-stack software engineer{' '}
           </span>
-          with 10 years of experience. I specialize in{' '}
+          with nearly a decade of experience. I specialize in{' '}
           <span className="font-semibold text-white">
             web application and web API development
           </span>
