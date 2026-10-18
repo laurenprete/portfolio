@@ -16,9 +16,9 @@ const skills = [
 ];
 const Hero = () => (
   <div>
-    <div className="flex flex-col lg:flex-row items-center justify-center lg:text-lg text-gray-200">
+    <div className="flex flex-col items-center justify-center text-gray-200 lg:flex-row lg:text-lg">
       <div className="lg:w-3/5 lg:text-justify">
-        <h1 className="mb-4 text-3xl lg:text-4xl font-bold text-lightpurple">
+        <h1 className="mb-4 text-3xl font-bold text-lightpurple lg:text-4xl">
           Hi, I'm <span>Lauren.</span>
         </h1>
         <p className="py-2">
@@ -58,7 +58,8 @@ const Hero = () => (
             Briarwood Software
           </a>
           , a consulting firm where I build custom web applications and software
-          integrations for clients across e-commerce, education, and service industries.
+          integrations for clients across e-commerce, education, and service
+          industries.
         </p>
         <p className="py-2">
           Want to get in touch? You can read my{' '}
@@ -66,7 +67,10 @@ const Hero = () => (
             className="font-semibold text-lightblue"
             target="_blank"
             href="assets/docs/LaurenPrete_Resume2026.pdf"
-          >resume</a> or find me on{' '}
+          >
+            resume
+          </a>
+          , find me on{' '}
           <a
             className="font-semibold text-lightblue"
             target="_blank"
@@ -74,18 +78,25 @@ const Hero = () => (
           >
             LinkedIn
           </a>
+          , or email me at{' '}
+          <a
+            className="font-semibold text-lightblue"
+            href="mailto:hello@laurenprete.com"
+          >
+            hello@laurenprete.com
+          </a>
         </p>
       </div>
-      <div className="lg:w-2/5 px-10 mb-6 md:mb-10 lg:mb-0 order-first lg:order-last flex items-center justify-center">
+      <div className="order-first mb-6 flex items-center justify-center px-10 md:mb-10 lg:order-last lg:mb-0 lg:w-2/5">
         <img
           src="assets/images/lauren.jpg"
           alt="Lauren"
-          className="img-shadow w-28 md:w-36 lg:w-48 rounded-full border-2 border-lightpurple object-cover"
+          className="img-shadow w-28 rounded-full border-2 border-lightpurple object-cover md:w-36 lg:w-48"
         />
       </div>
     </div>
     <div>
-      <h2 className="my-4 text-2xl lg:text-3xl font-bold text-lightpurple">
+      <h2 className="my-4 text-2xl font-bold text-lightpurple lg:text-3xl">
         Languages & Tools
       </h2>
       <div>
