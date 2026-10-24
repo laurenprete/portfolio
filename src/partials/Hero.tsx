@@ -3,6 +3,7 @@ const skills = [
   '.NET',
   'TypeScript',
   'Java',
+  'Rust',
   'Angular',
   'React',
   'Next.js',
@@ -23,15 +24,14 @@ const Hero = () => (
         </h1>
         <p className="py-2">
           I'm a{' '}
-          <span className="font-semibold text-white">
-            full-stack software engineer{' '}
-          </span>
-          with nearly a decade of experience. I specialize in{' '}
+          <span className="font-semibold text-white">software engineer</span>{' '}
+          with nearly a decade of experience, now leading a team as well as
+          writing code. I specialize in{' '}
           <span className="font-semibold text-white">
             web application and web API development
           </span>
-          , but I dabble to varying degrees in the worlds of desktop, mobile,
-          and embedded as well.
+          , but I've worked across desktop, embedded, and production automation
+          too.
         </p>
         <p className="py-2">
           Software engineering is my passion. I take pride and joy in building{' '}
@@ -44,12 +44,13 @@ const Hero = () => (
           conveying technical information, and managing projects and roadmaps.
         </p>
         <p className="py-2">
-          I'm a Software Engineer Lead at{' '}
+          I'm a Software Engineering Manager at{' '}
           <span className="font-semibold text-white">
             North Atlantic Industries
           </span>
-          , where I build internal tools and automation for embedded computing
-          products in the aerospace and defense space. I also run{' '}
+          , where my team builds the internal software, production automation,
+          and embedded tooling behind aerospace and defense computing products.
+          I also run{' '}
           <a
             className="font-semibold text-lightblue"
             target="_blank"
