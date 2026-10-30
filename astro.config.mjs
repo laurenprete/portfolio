@@ -6,7 +6,7 @@ import robotsTxt from 'astro-robots-txt';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://laurenprete.github.io/',
+  site: 'https://laurenprete.com/',
   //base: 'portfolio',
   trailingSlash: 'always', // Use to always append '/' at end of url
   markdown: {
@@ -20,6 +20,6 @@ export default defineConfig({
     react(),
     tailwind({}),
     sitemap(),
-    robotsTxt()
+    robotsTxt({ sitemap: 'https://laurenprete.com/sitemap.xml' }),
   ],
 });
